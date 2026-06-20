@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="OTG Network — music, community, inspiration.">
+  <title>OTG Network App</title>
+
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+
+  <style>
+    :root {
+      --bg: #050505;
+      --card: #101010;
+      --text: #ffffff;
+      --muted: #b8b8b8;
+      --gold: #d7a646;
+      --line: rgba(255,255,255,.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1b1b1b 0%, #050505 55%, #000 100%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .app {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 22px 18px 14px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(0,0,0,.65);
+      backdrop-filter: blur(14px);
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      object-fit: cover;
+      box-shadow: 0 0 18px rgba(215,166,70,.25);
+    }
+
+    h1 {
+      font-size: 24px;
+      line-height: 1.1;
+      margin: 0;
+      letter-spacing: .2px;
+    }
+
+    .tagline {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 4px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px 18px 34px;
+      flex: 1;
+    }
+
+    .hero {
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 26px 20px;
+      background:
+        linear-gradient(135deg, rgba(215,166,70,.18), rgba(255,255,255,.03)),
+        rgba(16,16,16,.92);
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    }
+
+    .hero h2 {
+      margin: 0 0 10px;
+      font-size: 28px;
+      line-height: 1.15;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 16px;
+    }
+
+    .buttons {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    a.button {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      background: #171717;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px 16px;
+      font-weight: 700;
+      transition: transform .15s ease, border-color .15s ease, background .15s ease;
+    }
+
+    a.button.primary {
+      background: linear-gradient(135deg, #d7a646, #8d6324);
+      color: #090909;
+      border-color: rgba(215,166,70,.65);
+    }
+
+    a.button:hover {
+      transform: translateY(-1px);
+      border-color: rgba(215,166,70,.55);
+    }
+
+    .section-title {
+      margin: 28px 0 12px;
+      font-size: 18px;
+      color: var(--gold);
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(16,16,16,.75);
+      padding: 18px;
+      margin-top: 12px;
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 17px;
+    }
+
+    .card span {
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      margin-top: 20px;
+    }
+
+    footer {
+      color: #777;
+      text-align: center;
+      font-size: 12px;
+      padding: 22px;
+      border-top: 1px solid var(--line);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+    <header>
+      <div class="brand">
+        <img class="logo" src="./icons/icon-192.png" alt="OTG Network">
+        <div>
+          <h1>OTG Network</h1>
+          <div class="tagline">Music • Community • Inspiration</div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>OTG Network App</h2>
+        <p>
+          Быстрый вход в официальный сайт OTG Network и музыкальные площадки.
+          Основной сайт остаётся на Google Sites, поэтому когда ты обновляешь сайт,
+          приложение ведёт пользователей на актуальную версию.
+        </p>
+
+        <div class="buttons">
+          <a class="button primary" href="https://www.otgnetwork.eu/" target="_blank" rel="noopener">Открыть сайт OTG Network</a>
+          <a class="button" href="https://open.spotify.com/artist/5vORmxR07ZvxvcMsjZxDWR" target="_blank" rel="noopener">Spotify</a>
+          <a class="button" href="https://music.youtube.com/@otg_network_media" target="_blank" rel="noopener">YouTube Music</a>
+          <a class="button" href="https://www.last.fm/music/OTG+Network" target="_blank" rel="noopener">Last.fm</a>
+          <a class="button" href="https://musicbrainz.org/artist/f83c7251-ae4a-4c1d-a885-a3f78f82e47e" target="_blank" rel="noopener">MusicBrainz</a>
+        </div>
+      </section>
+
+      <h3 class="section-title">Релизы</h3>
+
+      <div class="card">
+        <strong>Мама хоть во сне приходи</strong>
+        <span>Официальный релиз OTG Network. Доступен на Spotify, YouTube Music, Amazon Music, LINE Music и других площадках.</span>
+      </div>
+
+      <div class="card">
+        <strong>Идти вопреки</strong>
+        <span>Следующий релиз OTG Network. После полного появления на площадках добавим отдельные ссылки.</span>
+      </div>
+
+      <p class="note">
+        Это безопасная первая версия PWA. Она не заменяет основной сайт и не ломает домен.
+        Позже можно сделать полноценное приложение с каталогом релизов, заказом песен и расписанием эфиров.
+      </p>
+    </main>
+
+    <footer>
+      © 2026 OTG Network
+    </footer>
+  </div>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("./sw.js");
+      });
+    }
+  </script>
+</body>
+</html>
